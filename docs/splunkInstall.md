@@ -1,5 +1,5 @@
 # Create a container
-<img width="945" height="711" alt="image" src="https://github.com/user-attachments/assets/d0cc3b1a-0a0c-41b2-a3c0-217be0217304" />
+<img width="945" height="711" alt="image" src="https://github.com/user-attachments/assets/d0cc3b1a-0a0c-41b2-a3c0-217be0217304" /> <br>
 Then: apt update && apt full-upgrade -y
 
 <br>
