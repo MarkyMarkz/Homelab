@@ -10,7 +10,7 @@ wget -O splunk-10.6.0.5-86587d4e3b27-linux-amd64.deb https://download.splunk.com
 <br>
 
 ## Splunk error with creation of logs
-<img width="260" height="219" alt="image" src="https://github.com/user-attachments/assets/5a01b909-e24e-4b58-8f5c-72e158ba1487" /><br>
+<img width="429" height="361" alt="image" src="https://github.com/user-attachments/assets/6d276e63-6577-4288-b4e8-600c95fa446d" /><br>
 The log files were owned by root not letting Splunk create its log files. 
 I had to use chown -R splunk:splunk /opt/splunk to change the ownership to Splunk.
 
