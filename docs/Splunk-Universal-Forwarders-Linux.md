@@ -34,7 +34,7 @@ su - splunkfwd -c "/opt/splunkforwarder/bin/splunk start --accept-license --answ
 
 <br>
 
-And now we can finally connect it to the Splunk Server:
+And now we can finally connect it to the Splunk Server:<br>
 su - splunkfwd -c "/opt/splunkforwarder/bin/splunk add forward-server 192.168.0.145:9997"
 <img width="945" height="138" alt="image" src="https://github.com/user-attachments/assets/2b8e1efc-80dc-418c-b4c0-edc4e0a2b20a" /><br>
 
@@ -43,13 +43,13 @@ Now that they are connected, we must choose what logs we would like to send from
 <br>
 
 ## Locating the logs and forwarding them to splunk
-The first step is to find out where AdGuard is saving its logs:
+The first step is to find out where AdGuard is saving its logs:<br>
 find / -iname "querylog*" 2>/dev/null
 <img width="697" height="88" alt="image" src="https://github.com/user-attachments/assets/7e829ce7-b151-4e3f-9e5d-194de10e1086" /><br>
 
 <br>
 
-And then we can choose to monitor it:
+And then we can choose to monitor it:<br>
 su - splunkfwd -c "/opt/splunkforwarder/bin/splunk add monitor /opt/AdGuardHome/data/querylog.json -index main -sourcetype adguard"
 
 <br>
@@ -64,10 +64,10 @@ To fix this we also need to give splunkfwd reading rights without needing to ope
 
 <br>
 
-To change this I used ACL (Access Control List) to let splunkfwd read current and future files:
-apt install -y acl
-setfacl -R -m u:splunkfwd:rX /opt/AdGuardHome/data
-setfacl -d -m u:splunkfwd:rX /opt/AdGuardHome/data
+To change this I used ACL (Access Control List) to let splunkfwd read current and future files:<br>
+apt install -y acl<br>
+setfacl -R -m u:splunkfwd:rX /opt/AdGuardHome/data<br>
+setfacl -d -m u:splunkfwd:rX /opt/AdGuardHome/data<br>
 <img width="664" height="148" alt="image" src="https://github.com/user-attachments/assets/53b338f2-61b8-45f0-ba69-05deda06974f" /><br>
 
 <br>
