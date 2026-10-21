@@ -1,4 +1,4 @@
-# Splunk Universal Forwarders Linux
+# Splunk Universal Forwarder for Linux
 For this example, I’ll install splunk forwarder for AdGuard.
 Now that the Splunk server is set up it needs data to be useful. We do this by sending all the logs from the computers in the network to the Splunk Server using Splunk Universal Forwarders.<br>
 
