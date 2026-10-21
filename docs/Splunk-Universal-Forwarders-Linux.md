@@ -49,12 +49,12 @@ find / -iname "querylog*" 2>/dev/null<br>
 
 <br>
 
-And then we can choose to monitor it:<br>
+### And then we can choose to monitor it:
 su - splunkfwd -c "/opt/splunkforwarder/bin/splunk add monitor /opt/AdGuardHome/data/querylog.json -index main -sourcetype adguard"
 
 <br>
 
-This gave me an error message:
+### This gave me an error message:
 <img width="945" height="57" alt="image" src="https://github.com/user-attachments/assets/b81f221c-2f0e-4d17-b3f6-9b9c9d7442b6" /><br>
 
 <br>
@@ -64,7 +64,7 @@ To fix this we also need to give splunkfwd reading rights without needing to ope
 
 <br>
 
-To change this I used ACL (Access Control List) to let splunkfwd read current and future files:<br>
+### To change this I used ACL (Access Control List) to let splunkfwd read current and future files:
 apt install -y acl<br>
 setfacl -R -m u:splunkfwd:rX /opt/AdGuardHome/data<br>
 setfacl -d -m u:splunkfwd:rX /opt/AdGuardHome/data<br>
