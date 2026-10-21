@@ -44,7 +44,7 @@ Now that they are connected, we must choose what logs we would like to send from
 
 ## Locating the logs and forwarding them to splunk
 The first step is to find out where AdGuard is saving its logs:<br>
-find / -iname "querylog*" 2>/dev/null
+find / -iname "querylog*" 2>/dev/null<br>
 <img width="697" height="88" alt="image" src="https://github.com/user-attachments/assets/7e829ce7-b151-4e3f-9e5d-194de10e1086" /><br>
 
 <br>
