@@ -1,4 +1,4 @@
-# Splunk Universal Forwarder Windows
+# Splunk Universal Forwarder for Windows
 
 ### Download Splunk Universal Forwarder for Windows:
 <img width="945" height="445" alt="image" src="https://github.com/user-attachments/assets/ab0486c8-b2d3-46d2-82d7-fa8dd3902601" /><br>
