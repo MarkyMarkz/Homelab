@@ -13,7 +13,7 @@
 <br>
 
 ## Then check if the forwarder is running towards the splunk server
-<img width="945" height="278" alt="image" src="https://github.com/user-attachments/assets/03048784-2a67-4203-9f4b-c44b86815831" /><br>
+<img width="745" height="216" alt="image" src="https://github.com/user-attachments/assets/a2763e05-3d37-4dde-9251-0873f328ffaa" /><br>
 
 ## Forwarding the logs to be monitored
 Now that the forwarder is connected to the Splunk server, we can start sending Windows Security, System, and Application logs to it.<br>
