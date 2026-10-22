@@ -6,7 +6,7 @@
 
 <br>
 
-## Follow the installation guide:
+## Follow the installation guide
 <img width="797" height="610" alt="image" src="https://github.com/user-attachments/assets/3b783816-2738-406c-ae94-8431f94809b0" /><br>
 <img width="794" height="616" alt="image" src="https://github.com/user-attachments/assets/10baeaed-6243-4169-8ba3-11d844f2971b" /><br>
 
