@@ -1,6 +1,6 @@
 # Home SOC (Splunk_Dashboard)
 
-<img width="1917" height="899" alt="image" src="https://github.com/user-attachments/assets/29590799-8755-47a0-9b8d-e57308193228" /><br>
+<img width="1086" height="510" alt="image" src="https://github.com/user-attachments/assets/23865364-3da0-478a-952a-122310f5086e" /><br>
 
 <br>
 
@@ -97,14 +97,14 @@ index=main sourcetype=adguard earliest=-24h
 <br>
 
 ## Failed Server Logins
-<img width="829" height="382" alt="image" src="https://github.com/user-attachments/assets/c9b69b3e-21f5-47fb-92cc-efee3461cf62" /><br>
+<img width="835" height="378" alt="image" src="https://github.com/user-attachments/assets/426a4cc6-a0d4-4fef-af98-eea084d17f64" /><br>
+
 
 ```
-index=main sourcetype=pve_proxy_access earliest=-7d 
-| rex field=_raw "^(?<client_ip>\S+) \S+ \S+ \[(?<ts>[^\]]+)\] \"(?<method>\S+) (?<path>\S+) HTTP/[\d.]+\" (?<status>\d+)" 
-| where path="/api2/json/access/ticket" AND status="401" 
-| stats count 
-| fields count
+index=main sourcetype=syslog earliest=-7d
+| rex field=_raw "authentication failure; rhost=(?<src_ip>\S+) user=(?<auth_user>\S+)"
+| where isnotnull(src_ip)
+| stats count
 ```
 
 <br>
