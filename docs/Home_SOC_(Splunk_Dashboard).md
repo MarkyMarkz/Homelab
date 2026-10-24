@@ -4,7 +4,7 @@
 
 <br>
 
-### Total Log Events: 24h
+## Total Log Events: 24h
 <img width="945" height="192" alt="image" src="https://github.com/user-attachments/assets/7bf776b9-f98f-415c-9fb8-d50a53e0467a" /><br>
 
 ```
@@ -13,7 +13,7 @@ index=main sourcetype=adguard earliest=-24h | stats count as "Total DNS"
 
 <br>
 
-### Blocked by Filters
+## Blocked by Filters
 <img width="828" height="345" alt="image" src="https://github.com/user-attachments/assets/ac9dd1a0-da03-4af2-902b-03ed2860025c" /><br>
 
 ```
@@ -25,7 +25,7 @@ index=main sourcetype=adguard earliest=-24h
 
 <br>
 
-### Blocked malware/phishing
+## Blocked malware/phishing
 <img width="403" height="335" alt="image" src="https://github.com/user-attachments/assets/3d6f49fc-16fb-45ae-8316-581a046871de" /><br>
 
 ```
@@ -37,7 +37,7 @@ index=main sourcetype=adguard earliest=-24h
 
 <br>
 
-### Blocked adult websites
+## Blocked adult websites
 <img width="416" height="347" alt="image" src="https://github.com/user-attachments/assets/be0f2e70-8b40-4572-8b77-1d0bc15fff8b" /><br>
 
 ```
@@ -49,7 +49,7 @@ index=main sourcetype=adguard earliest=-24h
 
 <br>
 
-### Traffic time chart (Allowed/Blocked)
+## Traffic time chart (Allowed/Blocked)
 <img width="945" height="104" alt="image" src="https://github.com/user-attachments/assets/4c0b8e76-9683-43fb-9b4c-4d69766c50cb" /><br>
 
 ```
@@ -61,7 +61,7 @@ index=main sourcetype=adguard earliest=-24h
 
 <br>
 
-### Top Blocked Domains
+## Top Blocked Domains
 <img width="945" height="253" alt="image" src="https://github.com/user-attachments/assets/76249893-dda2-4bf1-91dd-2056bef78613" /><br>
 
 ```
@@ -74,7 +74,7 @@ index=main sourcetype=adguard earliest=-24h
 
 <br>
 
-### Query-type
+## Query-type
 <img width="795" height="454" alt="image" src="https://github.com/user-attachments/assets/7a2d49f7-0d2d-498c-821b-d2fecd8339ef" /><br>
 
 ```
@@ -85,7 +85,7 @@ index=main sourcetype=adguard earliest=-24h
 
 <br>
 
-### Client IPs
+## Client IPs
 <img width="834" height="428" alt="image" src="https://github.com/user-attachments/assets/e6eaae43-ef73-49c4-a201-57bfc22fe775" /><br>
 
 ```
@@ -96,7 +96,7 @@ index=main sourcetype=adguard earliest=-24h
 
 <br>
 
-### Failed Server Logins
+## Failed Server Logins
 <img width="829" height="382" alt="image" src="https://github.com/user-attachments/assets/c9b69b3e-21f5-47fb-92cc-efee3461cf62" /><br>
 
 ```
@@ -109,7 +109,7 @@ index=main sourcetype=pve_proxy_access earliest=-7d
 
 <br>
 
-### Windows: Topp EventCodes
+## Windows: Topp EventCodes
 <img width="945" height="213" alt="image" src="https://github.com/user-attachments/assets/28759675-4db4-4d7d-88ea-50975c4e8a5f" /><br>
 
 ```
@@ -127,7 +127,7 @@ index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog* earliest=-7d
 
 <br>
 
-### Proxmox: Task Overview
+## Proxmox: Task Overview
 <img width="847" height="391" alt="image" src="https://github.com/user-attachments/assets/43d0a00e-d3f3-4561-89e1-a727c9b1d536" /><br>
 
 ```
