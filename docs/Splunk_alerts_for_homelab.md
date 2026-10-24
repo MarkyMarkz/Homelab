@@ -89,7 +89,7 @@ net localgroup Administratorer testbruker /add
 ### Alert:
 <img width="892" height="360" alt="image" src="https://github.com/user-attachments/assets/0926a70a-179b-4900-a5b2-07491164ac0a" /><br>
 
-### To remove the test account/s privileges and deletion (cleanup):
+### To remove the test account/s privileges and deletion (cleanup)
 
 ### Command for removal of account/s privileges:
 <img width="841" height="56" alt="image" src="https://github.com/user-attachments/assets/d36ba93b-b6b0-4b12-9959-c959a24025bc" /><br>
