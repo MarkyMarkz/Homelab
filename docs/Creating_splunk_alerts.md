@@ -6,13 +6,14 @@
 <br>
 
 ## Alert setup
-Fill information about what and when and then add trigger actions. In this example I’m using triggered alerts (sends the alert to an overview of triggered alerts in splunk) and discord webhooks, which are a simple way to post alerts from the splunk server into Discord using “internet magic”<br>
+Fill information about what and when and then add trigger actions. In this example I’m using triggered alerts (sends the alert to an overview of triggered alerts in splunk) and discord webhooks, which are a simple way to post alerts from the splunk server into Discord using “internet magic”<br><br>
+
 <img width="684" height="937" alt="image" src="https://github.com/user-attachments/assets/e50ee928-450c-42b3-9013-54e41c83dfa9" /><br>
 
 <br>
 
 ## Discord Webhooks
-After creating the webhook on discord you can copy the URL and paste it into URL box in splunk/script.
+After creating the webhook on discord you can copy the URL and paste it into URL box in splunk/script.<br>
 <img width="945" height="686" alt="image" src="https://github.com/user-attachments/assets/59390683-57a6-4aba-a1d9-7bf284e2e347" /><br>
 
 <br>
@@ -41,6 +42,7 @@ nano /opt/splunk/etc/apps/search/bin/scripts/discord_alert.py
 ```
 chmod +x /opt/splunk/etc/apps/search/bin/scripts/discord_alert.py
 ```
+<br>
 
 ## Testing if the alert works
 The Proxmox: Failed Web UI Login (Brute Force) goes off if someone has failed logging in 5 times in a row. So let's try it!<br>
