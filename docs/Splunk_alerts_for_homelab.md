@@ -1,6 +1,6 @@
 # Active alerts in my homelab
 Each alert runs as a scheduled search on a cron interval (typically every 5 minutes). When the search executes, it checks the defined trigger condition, for example, whether the number of matching results is greater than zero, or whether a threshold (such as 3+ failed login attempts) is met.
-If the condition is satisfied, Splunk fires the configured trigger actions I have chosen:<br> 
+If the condition is satisfied, Splunk fires the configured trigger actions I have chosen:<br><br> 
 Add to Triggered Alerts (logs the event in Splunk’s Activity)<br>
 Run a script (sends an alert to discord with information)<br>
 <br>
