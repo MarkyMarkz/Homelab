@@ -23,7 +23,7 @@ index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog:Security EventCode=4625 e
 
 <br>
 
-### I failed logging into my computer multiple times
+### I failed logging into my computer multiple times:
 <img width="945" height="326" alt="image" src="https://github.com/user-attachments/assets/79927cf5-ce3f-49db-a0a4-ef26ff0e4965" /><br>
 
 ```
@@ -32,7 +32,7 @@ net use \\192.168.0.127\C$ /user:marks feilpassord12345
 
 <br>
 
-### Alert
+### Alert:
 <img width="885" height="219" alt="image" src="https://github.com/user-attachments/assets/8f4b438c-23d6-4b2f-ae61-96d22113ca29" /><br>
 
 <br><br>
@@ -58,7 +58,7 @@ net user testbruker Test1234! /add
 
 <br>
 
-### Alert
+### Alert:
 <img width="885" height="201" alt="image" src="https://github.com/user-attachments/assets/4239a86d-152c-4e77-b814-71d2778f42d4" /><br>
 
 <br>
@@ -77,7 +77,7 @@ index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog:Security EventCode=4732 e
 
 <br>
 
-### After creating a new user I added it to the local Administrators group
+### After creating a new user I added it to the local Administrators group:
 <img width="810" height="147" alt="image" src="https://github.com/user-attachments/assets/fd2d61ba-ea59-4134-991f-9cb7fe0d4b04" /><br>
 
 ```
@@ -86,7 +86,7 @@ net localgroup Administratorer testbruker /add
 
 <br>
 
-### Alert
+### Alert:
 <img width="892" height="360" alt="image" src="https://github.com/user-attachments/assets/0926a70a-179b-4900-a5b2-07491164ac0a" /><br>
 
 ### To remove the test account/s privileges and deletion (cleanup):
@@ -130,7 +130,7 @@ index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog:Security (EventCode=4624 
 
 <br>
 
-### I locked my windows PC (WIN + L) and failed the login 2 times and then correctly
+### I locked my windows PC (WIN + L) and failed the login 2 times and then correctly:
 
 ### Alert:
 <img width="894" height="214" alt="image" src="https://github.com/user-attachments/assets/32c036bf-62ac-4053-81eb-e09a3cd705e2" /><br>
