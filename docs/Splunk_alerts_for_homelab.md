@@ -8,7 +8,7 @@ Each alert runs as a scheduled search on a cron interval (typically every 5 minu
 <img width="842" height="763" alt="image" src="https://github.com/user-attachments/assets/5662c100-74b7-4413-91c0-6f8b8d9bb8bf" /><br>
 
 ## Windows Brute Force
-Alerts when 3 or more failed Windows logon attempts occur for the same account within 5 minutes.<br>
+Alerts when 3 or more failed Windows logon attempts occur for the same account within 5 minutes.
 
 <br>
 
