@@ -10,8 +10,6 @@ Each alert runs as a scheduled search on a cron interval (typically every 5 minu
 ## Windows Brute Force
 Alerts when 3 or more failed Windows logon attempts occur for the same account within 5 minutes.
 
-<br>
-
 ```
 index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog:Security EventCode=4625 earliest=-5m
 | rex field=_raw "(?s)mislyktes for:.*?Kontonavn:\s+(?<target_account>\S+)"
@@ -20,8 +18,6 @@ index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog:Security EventCode=4625 e
 | stats count by target_account, src_ip
 | where count>=3
 ```
-
-<br>
 
 ### I failed logging into my computer multiple times
 <img width="945" height="326" alt="image" src="https://github.com/user-attachments/assets/79927cf5-ce3f-49db-a0a4-ef26ff0e4965" /><br>
