@@ -41,6 +41,8 @@ nano /opt/splunk/etc/apps/search/bin/scripts/discord_alert.py
 chmod +x /opt/splunk/etc/apps/search/bin/scripts/discord_alert.py
 ```
 
+<br>
+
 ## Testing if the alert works
 The Proxmox: Failed Web UI Login (Brute Force) goes off if someone has failed logging in 5 times in a row. So let's try it!<br>
 <img width="936" height="477" alt="image" src="https://github.com/user-attachments/assets/7c2b80f0-67a2-4367-be18-77c2a3019868" /><br>
