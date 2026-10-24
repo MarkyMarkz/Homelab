@@ -3,8 +3,6 @@
 ### Search for an event you want to monitor in your network, and save it as an alert:
 <img width="1033" height="183" alt="image" src="https://github.com/user-attachments/assets/8313f407-3dcc-4a1c-a5ea-5077ac8b9945" /><br>
 
-<br>
-
 ## Alert setup
 Fill information about what and when and then add trigger actions. In this example I’m using triggered alerts (sends the alert to an overview of triggered alerts in splunk) and discord webhooks, which are a simple way to post alerts from the splunk server into Discord using “internet magic”<br><br>
 
@@ -47,7 +45,7 @@ chmod +x /opt/splunk/etc/apps/search/bin/scripts/discord_alert.py
 ## Testing if the alert works
 The Proxmox: Failed Web UI Login (Brute Force) goes off if someone has failed logging in 5 times in a row. So let's try it!<br>
 <img width="936" height="477" alt="image" src="https://github.com/user-attachments/assets/7c2b80f0-67a2-4367-be18-77c2a3019868" /><br>
-Now I have failed logging into Proxmox VE multiple times.<br>
+I have now failed logging into Proxmox VE multiple times.<br>
 
 <br>
 
