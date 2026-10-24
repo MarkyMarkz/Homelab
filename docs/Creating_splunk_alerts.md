@@ -6,5 +6,5 @@
 <br>
 
 ## Alert setup
-Fill information about what and when and then add trigger actions. In this example I’m using triggered alerts (sends the alert to an overview of triggered alerts in splunk) and discord webhooks, which are a simple way to post alerts from the splunk server into Discord using “internet magic”
+Fill information about what and when and then add trigger actions. In this example I’m using triggered alerts (sends the alert to an overview of triggered alerts in splunk) and discord webhooks, which are a simple way to post alerts from the splunk server into Discord using “internet magic”<br>
 <img width="684" height="937" alt="image" src="https://github.com/user-attachments/assets/e50ee928-450c-42b3-9013-54e41c83dfa9" /><br>
