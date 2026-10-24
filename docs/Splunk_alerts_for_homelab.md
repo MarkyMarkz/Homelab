@@ -89,7 +89,7 @@ net localgroup Administratorer testbruker /add
 ### Alert
 <img width="892" height="360" alt="image" src="https://github.com/user-attachments/assets/0926a70a-179b-4900-a5b2-07491164ac0a" /><br>
 
-### To remove the test account/s privileges and deletion
+### To remove the test account/s privileges and deletion (cleanup):
 
 ### Command for removal of account/s privileges:
 <img width="841" height="56" alt="image" src="https://github.com/user-attachments/assets/d36ba93b-b6b0-4b12-9959-c959a24025bc" /><br>
@@ -114,40 +114,95 @@ net localgroup Administratorer
 
 <br>
 
+## Windows Successful Login After Failure
+Alerts when a successful Windows login follows 2 or more failed attempts within a short window.
 
+```
+index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog:Security (EventCode=4624 OR EventCode=4625) earliest=-5m
+| rex field=_raw "(?s)Ny pålogging:.*?Kontonavn:\s+(?<success_account>\S+)"
+| sort 0 _time
+| streamstats window=5 count(eval(EventCode=4625)) as recent_failures
+| where EventCode=4624 AND success_account!="SYSTEM" AND NOT match(success_account, "\$$") AND recent_failures>=2
+| eval time_bucket=round(_time)
+| dedup time_bucket, success_account
+| table _time, success_account, recent_failures
+```
 
+<br>
 
+### I locked my windows PC (WIN + L) and failed the login 2 times and then correctly
 
+### Alert:
+<img width="894" height="214" alt="image" src="https://github.com/user-attachments/assets/32c036bf-62ac-4053-81eb-e09a3cd705e2" /><br>
 
+### Splunk:
+<img width="945" height="82" alt="image" src="https://github.com/user-attachments/assets/ee3d68d7-4289-45f4-8b90-6979824ef015" /><br>
 
+<br>
 
+## Proxmox: Failed Web UI Login (Brute Force)
+Alert goes off if someone has failed logging in 5 times in a row.
 
+```
+index=main sourcetype=syslog earliest=-5m 
+| rex field=_raw "authentication failure; rhost=(?<src_ip>\S+) user=(?<auth_user>\S+)" 
+| where isnotnull(src_ip) 
+| stats count by src_ip, auth_user 
+| where count>=5
+```
 
+<br>
 
+### Note: Check out Creating_splunk_alerts_for_discord.md for full walkthrough.
 
+<br>
 
+## AdGuard: Malware/Phishing Domain Blocked
+Alerts when AdGuard blocks a domain flagged as malware or phishing.
 
+```
+index=main sourcetype=adguard earliest=-5m
+| rename Result.Reason as reasonCode
+| search reasonCode="4"
+| stats count
+| where count>0
+```
 
+<br>
 
+## SSH Brute Force (AdGuard Container)
+Alerts when 3 or more failed SSH login attempts occur from the same IP within 5 minutes.
 
+```
+index=main sourcetype=linux_secure earliest=-5m
+| rex field=_raw "Failed password.*from (?<src_ip>\S+)"
+| where isnotnull(src_ip)
+| stats count by src_ip
+| where count>=3
+```
 
+<br>
 
+### Note: I’ll add these alerts to more containers.
 
+<br>
 
+## Splunk Forwarder Data Gap
+Alerts when a forwarder host hasn't sent data to Splunk in over 30 minutes.
 
+```
+index=main earliest=-2h
+| stats max(_time) as last_seen by host
+| eval minutes_since = round((now()-last_seen)/60,1)
+| where minutes_since > 30
+| table host, minutes_since
+```
 
+<br>
 
+### Alert:
+<img width="876" height="182" alt="image" src="https://github.com/user-attachments/assets/54055518-8784-4943-b596-f92d9865909f" /><br>
 
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 
