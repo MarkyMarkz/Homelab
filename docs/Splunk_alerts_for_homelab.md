@@ -19,6 +19,8 @@ index=main host=DESKTOP-4OJMHUV sourcetype=WinEventLog:Security EventCode=4625 e
 | where count>=3
 ```
 
+<br>
+
 ### I failed logging into my computer multiple times
 <img width="945" height="326" alt="image" src="https://github.com/user-attachments/assets/79927cf5-ce3f-49db-a0a4-ef26ff0e4965" /><br>
 
